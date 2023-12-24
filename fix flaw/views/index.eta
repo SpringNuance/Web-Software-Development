@@ -1,0 +1,5 @@
+<h1>Welcome!</h1>
+<ul>
+    <li><a href="/auth/register">Registration form</a></li>
+    <li><a href="/auth/login">Login form</a></li>
+</ul>

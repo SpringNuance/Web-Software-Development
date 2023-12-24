@@ -1,0 +1,12 @@
+<% layout("./layouts/layout.eta") %>
+
+<h1>Statistics!</h1>
+
+<h2>Most created chores</h2>
+
+<table>
+<tr><th>User</th><th>Created chores</th></tr>
+<% it.mostCreatedChores.forEach(stat => { %>
+<tr><td><%= stat.name %></td><td><%= stat.count %></td></tr>
+<% }) %>
+</table>

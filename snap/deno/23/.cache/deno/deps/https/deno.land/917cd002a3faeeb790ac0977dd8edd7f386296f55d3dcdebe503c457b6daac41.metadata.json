@@ -1,0 +1,23 @@
+{
+  "headers": {
+    "last-modified": "Wed, 28 Apr 2021 18:36:55 GMT",
+    "via": "HTTP/1.1 deploy",
+    "content-length": "6827",
+    "cache-control": "public, max-age=31536000, immutable",
+    "access-control-allow-origin": "*",
+    "content-type": "application/typescript; charset=utf-8",
+    "x-amz-request-id": "M2V0BMSQF4R9V97S",
+    "expect-ct": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\"",
+    "vary": "Accept-Encoding",
+    "server": "cloudflare",
+    "alt-svc": "h3-27=\":443\"; ma=86400, h3-28=\":443\"; ma=86400, h3-29=\":443\"; ma=86400, h3=\":443\"; ma=86400",
+    "x-amz-id-2": "mvcIy2O64gmdsHc4SeIcJ8GOWxuEQPejLCh6Q6M/iTuml/dCVE1ktxUMLQEBxEAO3IyZ57cQcHI=",
+    "x-amz-version-id": "F2QSh7jitrFtkT5YZfd7SywPv22ZaWuS",
+    "cf-ray": "670604f67819fe58-HEL",
+    "etag": "\"5c319d7d4c8e828cf29a57e0e89b79ca\"",
+    "x-deno-ray": "europe-north1-a::0fa9c5233e2f58500b314ca854fd7054",
+    "cf-cache-status": "DYNAMIC",
+    "date": "Sat, 17 Jul 2021 19:53:57 GMT"
+  },
+  "url": "https://deno.land/x/postgres@v0.11.2/query/query.ts"
+}

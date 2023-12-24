@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <script src="/static/code.js" defer></script>
+  </head>
+  <body>
+    <h1>Names!</h1>
+    <input type='text' id='name' />
+    <input type='submit' value='Add new!' onclick='addName()' />
+    <ul id='list'>
+    </ul>
+  </body>
+</html>

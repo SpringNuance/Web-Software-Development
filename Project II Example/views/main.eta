@@ -1,0 +1,5 @@
+<% layout("./layouts/layout.eta") %>
+
+<a href="/chores">See chores (requires login)</a><br/>
+<a href="/auth/login">Login</a><br/>
+<a href="/auth/register">Register</a><br/>

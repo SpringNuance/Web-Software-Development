@@ -1,0 +1,14 @@
+Note! We've upgraded some of the dependencies during the process. 
+Most importantly, the deno library version in use is now 0.100.0 , 
+and the eta version in use is now v1.12.3. and the postgres driver version 
+is v0.11.2. This means that the imports that you use when submitting 
+assignments need to be adjusted if you are currently working on an assignment 
+-- these are the new versions:
+--> import { serve } from "https://deno.land/std@0.100.0/http/server.ts";
+--> import { configure, renderFile } from "https://deno.land/x/eta@v1.12.3/mod.ts";
+--> import { Client } from "https://deno.land/x/postgres@v0.11.2/mod.ts"; 
+(or import { Pool } from "https://deno.land/x/postgres@v0.11.2/mod.ts"; 
+depending on where you're at in the material)
+The materials and the assignment templates have been updated to match the new versions, so 
+the above adjustment needs to be only made on the assignments that you are currently working on 
+(including the project).

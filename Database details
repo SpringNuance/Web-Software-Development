@@ -1,0 +1,38 @@
+course website: https://wsd.cs.aalto.fi
+name: binh.nguyen@aalto.fi
+password: Vorstellungskraft997
+
+const CONCURRENT_CONNECTIONS = 2;
+const connectionPool = new Pool({
+  hostname: "chunee.db.elephantsql.com",
+  database: "nxezygnm",
+  user: "nxezygnm",
+  password: "gTU7xDDNuNwk53lsHvH11lkiqiqLeDOo",
+  port: 5432,
+}, CONCURRENT_CONNECTIONS);
+
+tree --dirsfirst
+cd application
+
+deno run --unstable --allow-all --watch run-locally.js
+deno run --allow-all --unstable app.js
+curl http://localhost:7777
+
+heroku login
+git init
+heroku git:remote -a multiple-choice-app-nuance
+git add .
+git commit -m "initial commit"
+git push heroku HEAD:master
+
+https://project-app-springnuance.herokuapp.com/
+
+- Everything works as expected.
+- The tests are really well implemented
+- The application displays some table forms, which I find easier to read than each line declaration
+
+- An error "email or password is incorrect" is not displayed when a non existing email, wrong email or wrong password in inputted in login page. This line should be displayed right after redirection
+- Errors displayed by wrong registration should be displayed under or on top of the text box field respectively for email and password. 
+- Not required but there should be some html file displayed when /static is called instead of an error
+
+- Honestly the application feels easy to use. However, the page /questions/:id has quite large headline and I have to scroll down a lot to add answers, which is a little inconvenient

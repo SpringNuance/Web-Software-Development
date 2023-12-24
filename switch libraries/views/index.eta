@@ -1,0 +1,5 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1>Hello world!</h1>
+<p>Welcome to my awesome page!</p>
+<a href="/forms">Click here to see another awesome page!</a>

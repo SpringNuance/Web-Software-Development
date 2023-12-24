@@ -1,0 +1,7 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1>Quiz application</h1>
+
+<p>This is an application where you can create questions and answer questions created by other users.</p>
+
+<p>If you haven't used the application before, you can start by <a href="/auth/register">registering</a>. If you have been here before, just <a href="/auth/login">log in</a>!</p>

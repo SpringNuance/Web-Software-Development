@@ -1,0 +1,6 @@
+
+<% layout('./layouts/layout.eta') %>
+
+<h2>Correct!</h2>
+
+<h4><a href="/quiz">Next question</a></h4>

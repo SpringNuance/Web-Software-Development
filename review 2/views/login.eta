@@ -1,0 +1,16 @@
+<% layout("./layouts/layout.eta") %>
+
+<% if (it.loginError && it.loginError.length > 0) { %>
+<p><%= it.loginError %></p>
+<% } %>
+<h1>Login form</h1>
+
+<form method="POST" action="/auth/login">
+  Email:<br/>
+  <input type="email" name="email" /><br/>
+  Password:<br/>
+  <input type="password" name="password" /><br/>
+  <input type="submit" value="Login" />
+</form>
+
+<a href="/auth/register">Not yet registered? Register here.</a>

@@ -1,0 +1,40 @@
+<% layout('./layouts/layout.eta') %>
+<h1>Statistics</h1>
+<h2>The total number of answers</h2>
+<p><%= it.myAnswerCount %></p>
+<h2>Total number of correct numbers</h2>
+<p><%= it.myCorrectCount %></p>
+<h2>Answer count to questions created by this account</h2>
+<% if (it.questions && it.questions.length > 0) { %>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Answer count</th>
+  </tr>
+  <% it.questions.forEach(question => { %>
+  <tr>
+    <td><%= question.question_text %></td>
+    <td><%= question.answer_count %></td>
+  </tr>
+  <% }); %>
+</table>
+
+<% } else { %>
+
+<p>You have created no questions</p>
+
+<% } %>
+
+<h2>Top 5 users with the most answers</h2>
+<table>
+  <tr>
+    <th>user email</th>
+    <th>answer count</th>
+  </tr>
+  <% it.topUsers.forEach(user => { %>
+  <tr>
+    <td><%= user.email %></td>
+    <td><%= user.count %></td>
+  </tr>
+  <% }); %>
+</table>

@@ -1,0 +1,57 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1><%=it.question.title%>: <%=it.question.question_text%></h1>
+
+<h2>Current options:</h2>
+
+<% if (it.options && it.options.length>0) { %>
+    <table>
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>Answer</th>
+                <th>Delete option</th>
+            </tr>
+        </thead>
+        </tbody>
+        <% it.options.forEach((option) => { %>
+            <tr>
+                <td><%=option.option_text%></td>
+                <td><%=option.is_correct%></td>
+                <td>
+                    <form method="POST" action="/questions/<%=it.question.id%>/options/<%=option.id%>/delete">
+                        <input type="submit" value="delete"/>
+                    </form>
+                </td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+<% } else { %>
+    <p>None available</p>
+    <h2>Delete question:</h2>
+    <form method="POST" action="/questions/<%=it.question.id%>/delete">
+        <input type="submit" value="Delete question"/>
+    </form>
+<% } %>
+
+<h2>Add answer option to question:</h2>
+
+<% if (it.validationErrors) { %>
+<ul>
+    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+        <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+            <li><%= err %></li>
+        <% }); %>
+    <% }); %>
+</ul>
+<% } %>
+
+<form method="POST" action="/questions/<%=it.question.id%>/options">
+Option:</br>
+<textarea name="option_text"><%=it.option_text ? it.option_text : "" %></textarea></br>
+Is correct?:</br>
+<input type="checkbox" name="is_correct"/></br>
+<input type="submit" value="Add"/>
+</form>
+

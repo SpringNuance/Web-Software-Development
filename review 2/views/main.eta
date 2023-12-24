@@ -1,0 +1,11 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1>Multiple choice question app</h1>
+
+<p>This application can be used for creating and answering multiple choice questions.</p>
+
+<p>In case you haven't used this application before, head out to: <a href="/auth/register">registration page</a></p>
+
+<p>If you already have an account, you can just <a href="/auth/login">login</a></p>
+
+<p>Once you have registrated successfully and logged into your account, you can also see some statistics that can be found in the navigation bar at the top</p>

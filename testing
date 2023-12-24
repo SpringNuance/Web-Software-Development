@@ -1,0 +1,9 @@
+curl -v -X POST -d "email=xuanbinh.dev@gmail.com&password=hansjohn" http://localhost:7777/auth/login
+
+curl --header "Content-Type: application/json" --request POST --data '{"questionId": 1, "optionId": 3 }' http://localhost:7777/api/questions/answer
+
+curl -v http://localhost:7777/api/questions/random
+
+select * from question_answers join questions on questions.id = question_answers.question_id
+
+select Y.email as email, count(*) as count from (select * from users as C join (select B.user_id from question_answers as A join questions as B on B.id = A.question_id) as X on C.id =  X.user_id) as Y group by Y.email order by count desc limit 5

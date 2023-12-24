@@ -1,0 +1,29 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1> Statistics </h1>
+
+<p>Total answers: <%= it.answers%></p>
+<p>Correct answers: <%= it.trues%></p>
+
+
+<p> There are <%=it.questionAnswers%> answers given to questions created by you!</p>
+
+
+<h3> Top 5 players: </h3> 
+
+<% if (it.top5 && it.top5.length > 0) { %>
+
+<ol>
+<% it.top5.forEach(player => { %>
+  <li> <%= player.email %>: <%= player.count %>  </li> 
+<% }); %>
+</ol>
+
+<% } else { %>
+
+<p>None available.</p>
+
+<% } %>
+
+
+<p><a href="/questions">Back to questions-></a></p>

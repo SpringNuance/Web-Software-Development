@@ -1,0 +1,7 @@
+<h1>Register!</h1>
+<form method="POST" action="/auth/register">
+    <input type="email" name="email" />
+    <input type="password" name="password" />
+    <input type="password" name="verification" />
+    <input type="submit" value="Submit!" />
+</form>

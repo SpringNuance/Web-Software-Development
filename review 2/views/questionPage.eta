@@ -1,0 +1,48 @@
+<% layout('./layouts/layout.eta') %>
+
+<% if (it.validationErrors) { %>
+<ul>
+    <% Object.keys(it.validationErrors).forEach((attribute) => { %>
+        <% Object.values(it.validationErrors[attribute]).forEach((err) => { %>
+            <li><%= err %></li>
+        <% }); %>
+    <% }); %>
+</ul>
+<% } %>
+
+<h1>Question title: <%= it.title %></h1>
+
+<h2>Question text: <%= it.question_text %></h2>
+
+<% if (it.answerOptions && it.answerOptions.length > 0) { %>
+<h3>Answer options:</h3>
+<ul>
+<% it.answerOptions.forEach(answerOption => { %>
+  <li><%= answerOption.option_text %> (<%= answerOption.is_correct %>) 
+  <form method="POST" action="/questions/<%= it.id %>/options/<%= answerOption.id %>/delete">
+  <input type="submit" value="Delete option"/>
+  </form>
+  </li>
+<% }); %>
+</ul>
+
+<% } else { %>
+
+<p>None available. Do you want to delete this question?</p>
+<form method="POST" action="/questions/<%= it.id %>/delete">
+<input type="submit" value="Delete question"/>
+</form>
+
+<% } %>
+
+<h2>Add an answer option!</h2>
+
+<form method="POST" action="/questions/<%= it.id %>/options">
+Answer text<br/>
+<textarea name="option_text"><%= it.option_text ? it.option_text : "" %></textarea><br/>
+Is correct<br/>
+<input type="checkbox" name="is_correct"/><br/>
+<input type="submit" value="Add"/>
+</form>
+
+<a href="/questions">Back to all questions</a>

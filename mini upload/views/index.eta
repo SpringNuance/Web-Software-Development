@@ -1,0 +1,16 @@
+<h1>Files! Last added id: <%= it.last_id < 0 ? "none" : it.last_id %></h1>
+
+<h2>Add file</h2>
+<form enctype="multipart/form-data" method="POST">
+  <input type="file" name="file" />
+  <input type="submit" value="Send file" />
+</form>
+
+<h2>Retrieve file</h2>
+<form method="POST" action="/files">
+  Password:<br/>
+  <input type="password" name="password" /><br/>
+  File id:<br/>
+  <input type="number" name="id" /><br/>
+  <input type="submit" value="Retrieve file" />
+</form>

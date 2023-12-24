@@ -1,0 +1,11 @@
+<% layout('./layouts/layout.eta') %>
+
+<h1> Question application </h1>
+
+<p1> With this appliacation you can create multiple choise questions, answer random questions that are either created by you or other users and view statistics of questions you have answered.</p>
+
+
+<p1> To create questions and view statistics, you have <a href="/auth/login">log in</a> with your account. </p>
+<p1> If you don't have account yet, you can <a href="/auth/register">register</a> new one.</p>
+
+
